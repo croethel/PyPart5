@@ -1,5 +1,7 @@
 from typing import List
+
 import math
+
 
 
 
@@ -56,17 +58,15 @@ def half_list(list_in: List, half: int) -> List:
     :return: A list.
     """
     import math
-    n = math.ceil(len(list_in) / 2)
+    n = math.ceil(len(list_in) // 2)
 
     if half == 1:
         list_out = list_in[0:n]
     ##gives first half
 
     else:
-        if n == 2:
-            list_out = list_in[n:len(list_in)]
-        else:
-            list_out = list_in[n-1:len(list_in)]
+        if half == 2:
+           list_out = list_in[n:len(list_in)]
     #gives second half
 
     return list_out
